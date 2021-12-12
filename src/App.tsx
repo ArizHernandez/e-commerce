@@ -4,9 +4,7 @@ import { BrowserRouter } from "react-router-dom"
 
 import Routes from "routes/index"
 
-function App() {
-  const a = ""
-  
+function App() {  
   return (
     <BrowserRouter>
       <Routes />

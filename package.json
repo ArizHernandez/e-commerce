@@ -38,11 +38,6 @@
     "vite": "^2.7.0",
     "vite-tsconfig-paths": "*"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-stage"
-    }
-  },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
