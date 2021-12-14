@@ -1,10 +1,5 @@
+/* eslint no-param-reassign: ["error", { "props": false }] */
 import { createSlice } from '@reduxjs/toolkit';
-
-type initialStateType = {
-  user: string;
-  first_name: string;
-  last_name: string;
-};
 
 const initialState = {
   user: null,

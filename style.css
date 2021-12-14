@@ -1,0 +1,28 @@
+@import '@fontsource/roboto';
+
+:root {
+  --primary: #358bfa;
+  --primary-ligth: #569cf7;
+  --primary-tiny: #74adf8;
+  --dark: #2b2b2b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto';
+}
+
+body::-webkit-scrollbar {
+  background-color: var(--primary-tiny);
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 12px;
+}

@@ -1,14 +1,8 @@
-import React from 'react';
-
-import { Fragment } from 'react';
+// import { Fragment } from 'react';
 import { Route } from 'react-router-dom';
 
-const PrivateRoutes = () => {
-  return (
-    <Fragment>
-      <Route></Route>
-    </Fragment>
-  );
-};
+function PrivateRoutes() {
+  return <Route />;
+}
 
 export default PrivateRoutes;

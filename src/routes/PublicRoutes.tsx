@@ -1,28 +1,31 @@
-import React, { Fragment, Suspense } from 'react';
+/* eslint import/no-unresolved: [1, { ignore: ['../'] }] */
+import React, { Suspense } from 'react';
+import image from 'assets/login-image.jpg';
 
 import { Redirect, Route } from 'react-router-dom';
 
-import Spinner from '../components/UI/Spinner';
+import Spinner from 'components/UI/Spinner';
+import classes from './PublicRoutes.module.css';
 
-import Login from 'views/auth/Login';
+const LoginScreen = React.lazy(() => import('../views/auth/Login'));
 
-// const LoginScreen = React.lazy(() => import("../views/auth"));
-
-const Public = () => {
+function Public() {
   return (
-    <Fragment>
-      {/* <Suspense fallback={<Spinner />}> */}
-      
-      <Route path="/login">
-        <Login />
-      </Route>
-      
-      <Route path="*" exact>
-        <Redirect to="/login" />
-      </Route>
-      {/* </Suspense> */}
-    </Fragment>
+    <div className={classes.auth}>
+      <div className={classes['auth-image']}>
+        <img src={image} alt="auth shoes" />
+      </div>
+      <Suspense fallback={<Spinner />}>
+        <Route path="/login">
+          <LoginScreen />
+        </Route>
+
+        <Route path="*" exact>
+          <Redirect to="/login" />
+        </Route>
+      </Suspense>
+    </div>
   );
-};
+}
 
 export default Public;

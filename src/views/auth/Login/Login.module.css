@@ -1,0 +1,26 @@
+.login {
+  width: 100%;
+  padding: 20px;
+}
+
+.login > h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.login-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-options > button {
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .login {
+    width: 35%;
+    padding: 20px;
+  }
+}
